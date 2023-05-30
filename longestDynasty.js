@@ -81,4 +81,4 @@ const dynasty = [
   },
 ];
 
-console.log(longestDynasty(dynasty));
+console.log(`The ${longestDynasty(dynasty)} is a longest`);
