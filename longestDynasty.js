@@ -40,15 +40,15 @@ function longestDynasty(dynastyReign) {
   let longestDynastyReign = "";
 
   for (let i = 0; i < dynastyReign.length; i++) {
-    const { name, year } = dynastyReign[i];
+    const dynasty = dynastyReign[i];
 
-    const startYear = convertYear(year);
+    const startYear = convertYear(dynasty.year);
 
     if (!isNaN(startYear)) {
       const duration = startYear - 1000;
       if (duration > longestDuration) {
         longestDuration = duration;
-        longestDynastyReign = name;
+        longestDynastyReign = dynasty.name;
       }
     } else {
       return "Invalid";
