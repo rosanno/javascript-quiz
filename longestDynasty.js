@@ -72,12 +72,12 @@ function convertYear(year) {
   let result = 0;
 
   for (let i = year.length - 1; i >= 0; i--) {
-    const currentSymbol = romanNumerals[year[i]];
+    const currentRomanNumerals = romanNumerals[year[i]];
 
-    if (i < year.length - 1 && currentSymbol < romanNumerals[year[i + 1]]) {
-      result -= currentSymbol;
+    if (i < year.length - 1 && currentRomanNumerals < romanNumerals[year[i + 1]]) {
+      result -= currentRomanNumerals;
     } else {
-      result += currentSymbol;
+      result += currentRomanNumerals;
     }
   }
 
