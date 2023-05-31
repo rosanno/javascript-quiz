@@ -51,12 +51,12 @@ function longestDynasty(dynastyReign) {
         longestDynastyReign = dynasty.name;
       }
     } else {
-      continue; // Skip the dynasty with an invalid year
+      continue;
     }
   }
 
   if (longestDynastyReign === "") {
-    return "No Valid Dynasty"; // Handle case when no valid dynasty is found
+    return "No Valid Dynasty";
   }
 
   return longestDynastyReign;
