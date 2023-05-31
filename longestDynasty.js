@@ -71,11 +71,10 @@ function convertYear(year) {
 
   let result = 0;
 
-  for (let i = 0; i < year.length; i++) {
+  for (let i = year.length - 1; i >= 0; i--) {
     const currentSymbol = romanSymbols[year[i]];
-    const nextSymbol = romanSymbols[year[i + 1]];
 
-    if (currentSymbol < nextSymbol) {
+    if (i < year.length - 1 && currentSymbol < romanSymbols[year[i + 1]]) {
       result -= currentSymbol;
     } else {
       result += currentSymbol;
