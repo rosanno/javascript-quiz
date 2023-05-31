@@ -1,3 +1,16 @@
+let products = [
+  { name: "Product A", profit: -75 },
+  { name: "Product B", profit: -70 },
+  { name: "Product C", profit: 93 },
+  { name: "Product D", profit: 5 },
+  { name: "Product E", profit: 88 },
+  { name: "Product F", profit: 29 },
+];
+
+console.log("Top Product:", topProduct(products));
+console.log("Bottom Product:", bottomProduct(products));
+console.log("Zero Profit Product:", zeroProfitProduct(products));
+
 function topProduct(productProfitArray) {
   if (productProfitArray.length === 0) {
     return "No Data";
@@ -37,14 +50,15 @@ function zeroProfitProduct(productProfitArray) {
     return "No Data";
   }
 
-  let nearestToZero = Infinity;
+  let nearestToZero = null;
 
   for (let i = 0; i < productProfitArray.length; i++) {
     let product = productProfitArray[i];
     let profitDiff = Math.abs(product.profit);
     if (
+      nearestToZero === null ||
       profitDiff < Math.abs(nearestToZero) ||
-      (profitDiff === nearestToZero && product.profit > 0)
+      (profitDiff === Math.abs(nearestToZero) && product.profit > 0)
     ) {
       nearestToZero = product.profit;
       zeroProduct = product;
@@ -53,16 +67,3 @@ function zeroProfitProduct(productProfitArray) {
 
   return zeroProduct;
 }
-
-let products = [
-  { name: "Product A", profit: -75 },
-  { name: "Product B", profit: -70 },
-  { name: "Product C", profit: 93 },
-  { name: "Product D", profit: 5 },
-  { name: "Product E", profit: 88 },
-  { name: "Product F", profit: 29 },
-];
-
-console.log("Top Product:", topProduct(products));
-console.log("Bottom Product:", bottomProduct(products));
-console.log("Zero Profit Product:", zeroProfitProduct(products));

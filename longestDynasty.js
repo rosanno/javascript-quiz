@@ -40,7 +40,7 @@ function convertYear(year) {
     const currentSymbol = romanSymbols[year[i]];
     const nextSymbol = romanSymbols[year[i + 1]];
 
-    if (nextSymbol && currentSymbol < nextSymbol) {
+    if (currentSymbol < nextSymbol) {
       result -= currentSymbol;
     } else {
       result += currentSymbol;
@@ -81,4 +81,4 @@ const dynasty = [
   },
 ];
 
-console.log(`The ${longestDynasty(dynasty)} is a longest`);
+console.log(longestDynasty(dynasty));
