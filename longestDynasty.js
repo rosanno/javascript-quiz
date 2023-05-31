@@ -1,3 +1,36 @@
+const dynasty = [
+  {
+    name: "San Dynasty",
+    year: "MXLI",
+  },
+  {
+    name: "Viloria Dynasty",
+    year: "MCCCIIII",
+  },
+  {
+    name: "Tan Dynasty",
+    year: "MCCCXCVIII",
+  },
+  {
+    name: "Bon Dynasty",
+    year: "MCDXLV",
+  },
+  {
+    name: "Maiko Dynasty",
+    year: "MDCLXIV",
+  },
+  {
+    name: "Paul Dynasty",
+    year: "MCMXLIX",
+  },
+  {
+    name: "Andre Dynasty",
+    year: "MMXICX",
+  },
+];
+
+console.log(longestDynasty(dynasty));
+
 function longestDynasty(dynastyReign) {
   if (dynastyReign.length === 0) {
     return "No Data";
@@ -49,36 +82,3 @@ function convertYear(year) {
 
   return result;
 }
-
-const dynasty = [
-  {
-    name: "San Dynasty",
-    year: "MXLI",
-  },
-  {
-    name: "Viloria Dynasty",
-    year: "MCCCIIII",
-  },
-  {
-    name: "Tan Dynasty",
-    year: "MCCCXCVIII",
-  },
-  {
-    name: "Bon Dynasty",
-    year: "MCDXLV",
-  },
-  {
-    name: "Maiko Dynasty",
-    year: "MDCLXIV",
-  },
-  {
-    name: "Paul Dynasty",
-    year: "MCMXLIX",
-  },
-  {
-    name: "Andre Dynasty",
-    year: "MMXICX",
-  },
-];
-
-console.log(longestDynasty(dynasty));

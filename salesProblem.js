@@ -54,7 +54,8 @@ function zeroProfitProduct(productProfitArray) {
 
   for (let i = 0; i < productProfitArray.length; i++) {
     let product = productProfitArray[i];
-    let profitDiff = Math.abs(product.profit);
+    let profitDiff = product.profit;
+    
     if (
       nearestToZero === null ||
       profitDiff < Math.abs(nearestToZero) ||
