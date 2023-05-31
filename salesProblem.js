@@ -44,22 +44,20 @@ function bottomProduct(productProfitArray) {
 }
 
 function zeroProfitProduct(productProfitArray) {
-  let zeroProduct = "";
-
   if (productProfitArray.length === 0) {
     return "No Data";
   }
 
+  let zeroProduct = "";
   let nearestToZero = null;
 
   for (let i = 0; i < productProfitArray.length; i++) {
     let product = productProfitArray[i];
-    let profitDiff = product.profit;
-    
+
     if (
       nearestToZero === null ||
-      profitDiff < Math.abs(nearestToZero) ||
-      (profitDiff === Math.abs(nearestToZero) && product.profit > 0)
+      product.profit < Math.abs(nearestToZero) ||
+      (product.profit === Math.abs(nearestToZero) && product.profit > 0)
     ) {
       nearestToZero = product.profit;
       zeroProduct = product;
