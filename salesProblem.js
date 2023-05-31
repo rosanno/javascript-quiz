@@ -44,8 +44,8 @@ function zeroProfitProduct(productProfitArray) {
   for (let i = 0; i < productProfitArray.length; i++) {
     if (
       nearestToZero === null ||
-      product.profit < Math.abs(nearestToZero) ||
-      (product.profit === Math.abs(nearestToZero) && product.profit > 0)
+      productProfitArray[i].profit < Math.abs(nearestToZero) ||
+      (productProfitArray[i].profit === Math.abs(nearestToZero) && productProfitArray[i].profit > 0)
     ) {
       nearestToZero = productProfitArray[i].profit;
       zeroProduct = productProfitArray[i];
