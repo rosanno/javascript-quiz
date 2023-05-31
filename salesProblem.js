@@ -12,9 +12,7 @@ console.log("Bottom Product:", bottomProduct(products));
 console.log("Zero Profit Product:", zeroProfitProduct(products));
 
 function topProduct(productProfitArray) {
-  if (productProfitArray.length === 0) {
-    return "No Data";
-  }
+  if (productProfitArray.length === 0) return "No Data";
 
   let topProduct = productProfitArray[0];
 
@@ -26,9 +24,7 @@ function topProduct(productProfitArray) {
 }
 
 function bottomProduct(productProfitArray) {
-  if (productProfitArray.length === 0) {
-    return "No Data";
-  }
+  if (productProfitArray.length === 0) return "No Data";
 
   let bottomProduct = productProfitArray[0];
 
@@ -40,9 +36,7 @@ function bottomProduct(productProfitArray) {
 }
 
 function zeroProfitProduct(productProfitArray) {
-  if (productProfitArray.length === 0) {
-    return "No Data";
-  }
+  if (productProfitArray.length === 0) return "No Data";
 
   let zeroProduct = "";
   let nearestToZero = null;
