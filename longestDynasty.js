@@ -61,7 +61,7 @@ const dynasty = [
   },
   {
     name: "Tan Dynasty",
-    year: "MMXICX",
+    year: "MCCCXCVIII",
   },
   {
     name: "Bon Dynasty",
@@ -77,7 +77,7 @@ const dynasty = [
   },
   {
     name: "Andre Dynasty",
-    year: "MCCCXCVIII",
+    year: "MMXICX",
   },
 ];
 
