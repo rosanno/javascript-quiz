@@ -51,7 +51,7 @@ function longestDynasty(dynastyReign) {
         longestDynastyReign = dynasty.name;
       }
     } else {
-      continue;
+      return "Invalid Data";
     }
   }
 
