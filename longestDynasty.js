@@ -59,7 +59,7 @@ function longestDynasty(dynastyReign) {
 }
 
 function convertYear(year) {
-  const romanSymbols = {
+  const romanNumerals = {
     I: 1,
     V: 5,
     X: 10,
@@ -74,7 +74,7 @@ function convertYear(year) {
   for (let i = year.length - 1; i >= 0; i--) {
     const currentSymbol = romanNumerals[year[i]];
 
-    if (i < year.length - 1 && currentSymbol < romanSymbols[year[i + 1]]) {
+    if (i < year.length - 1 && currentSymbol < romanNumerals[year[i + 1]]) {
       result -= currentSymbol;
     } else {
       result += currentSymbol;
