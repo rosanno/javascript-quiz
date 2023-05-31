@@ -50,6 +50,8 @@ function longestDynasty(dynastyReign) {
         longestDuration = duration;
         longestDynastyReign = name;
       }
+    } else {
+      return "Invalid";
     }
   }
 
