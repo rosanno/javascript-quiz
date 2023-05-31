@@ -56,7 +56,7 @@ function longestDynasty(dynastyReign) {
   }
 
   if (longestDynastyReign === "") {
-    return "No Valid Dynasty";
+    return "Invalid";
   }
 
   return longestDynastyReign;
