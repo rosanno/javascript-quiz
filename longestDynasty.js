@@ -44,21 +44,31 @@ function longestDynasty(dynastyReign) {
 
     const startYear = convertYear(dynasty.year);
 
-    if (!isNaN(startYear)) {
+    if (startYear !== null) {
       const duration = startYear - 1000;
       if (duration > longestDuration) {
         longestDuration = duration;
         longestDynastyReign = dynasty.name;
       }
     } else {
-      return "Invalid";
+      continue; // Skip the dynasty with an invalid year
     }
+  }
+
+  if (longestDynastyReign === "") {
+    return "No Valid Dynasty"; // Handle case when no valid dynasty is found
   }
 
   return longestDynastyReign;
 }
 
 function convertYear(year) {
+  const regex = /^M(?:CM|D?C{0,3})(?:XC|L?X{0,3})(?:IX|V?I{0,3})$/;
+
+  if (!regex.test(year)) {
+    return null;
+  }
+
   const romanNumerals = {
     I: 1,
     V: 5,
