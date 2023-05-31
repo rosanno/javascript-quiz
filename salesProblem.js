@@ -19,9 +19,7 @@ function topProduct(productProfitArray) {
   let topProduct = productProfitArray[0];
 
   for (let i = 1; i < productProfitArray.length; i++) {
-    if (productProfitArray[i].profit > topProduct.profit) {
-      topProduct = productProfitArray[i];
-    }
+    productProfitArray[i].profit > topProduct.profit && (topProduct = productProfitArray[i]);
   }
 
   return topProduct;
@@ -35,9 +33,7 @@ function bottomProduct(productProfitArray) {
   let bottomProduct = productProfitArray[0];
 
   for (let i = 1; i < productProfitArray.length; i++) {
-    if (productProfitArray[i].profit < bottomProduct.profit) {
-      bottomProduct = productProfitArray[i];
-    }
+    productProfitArray[i].profit < bottomProduct.profit && (bottomProduct = productProfitArray[i]);
   }
 
   return bottomProduct;
