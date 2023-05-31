@@ -44,7 +44,7 @@ function longestDynasty(dynastyReign) {
 
     const startYear = convertYear(year);
 
-    if (startYear !== undefined) {
+    if (!isNaN(startYear)) {
       const duration = startYear - 1000;
       if (duration > longestDuration) {
         longestDuration = duration;
